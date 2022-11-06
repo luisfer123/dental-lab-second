@@ -146,5 +146,11 @@ public class UserServiceImpl implements UserService {
 	public boolean existsByEmail(String email) {
 		return userRepo.existsByEmail(email);
 	}
+	
+	@Override
+	@Transactional
+	public UserEntity save(UserEntity user) {
+		return userRepo.save(user);
+	}
 
 }
